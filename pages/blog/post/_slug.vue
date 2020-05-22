@@ -22,6 +22,8 @@
 			>FrontEnd</span>
 		</div>
 		{{slug}}
+		<h1>{{article.title}}</h1>
+		<nuxt-content :document="article" />
 	</div>
 </template>
 
@@ -31,9 +33,12 @@ export default {
 		return {
 			slug: this.$route.params.slug
 		};
+	},
+	async asyncData({ $content, params }) {
+		const article = await $content("articles/article").fetch();
+		return { article };
 	}
 };
 </script>
 
-<style>
-</style>
+
