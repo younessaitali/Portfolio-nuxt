@@ -16,30 +16,15 @@
 				</div>
 				<div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
 					<BlogCard
-						title="Improve your customer experience"
-						description="Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									Sint harum rerum voluptatem quo recusandae magni placeat
-									saepe molestiae, sed excepturi cumque corporis
-									perferendis hic."
-						:tags="['Case Study']"
-						image="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-					/>
-					<BlogCard
-						title="Boost your conversion rate"
-						description="Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Architecto accusantium praesentium eius, ut atque fuga
-										culpa, similique sequi cum eos quis dolorum."
-						:tags="['Blog']"
-						image="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-					/>
-					<BlogCard
-						title="How to use search engine optimization to drive sales"
-						description="Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Velit facilis asperiores porro quaerat doloribus,
-										eveniet dolore. Adipisci tempora aut inventore optio
-										animi., tempore temporibus quo laudantium."
-						:tags="['Video']"
+						v-for="(article, index) in articles"
+						:key="index"
+						:title="article.title"
+						:excerpt="article.excerpt"
+						:tags="article.tags"
 						image="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+						:date="article.date"
+						:time="article.time"
+						:slug="article.slug"
 					/>
 				</div>
 				<div class="flex justify-center items-center mt-10">
@@ -57,7 +42,12 @@
 import BlogCard from "~/components/Card/BlogCard";
 export default {
 	name: "BlogSection",
-	components: { BlogCard }
+	components: { BlogCard },
+	props: {
+		articles: {
+			required: true
+		}
+	}
 };
 </script>
 

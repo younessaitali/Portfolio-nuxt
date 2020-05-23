@@ -1,5 +1,5 @@
 <template>
-	<div class="pt-2 pb-12 sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32">
+	<div class="pt-2 bg-color-bg pb-12 sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32">
 		<div class="mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 xl:mt-28">
 			<div class="text-center">
 				<h2
@@ -19,41 +19,37 @@
 		>
 			<span
 				class="inline-flex mt-1 items-center px-8 py-3 rounded-full text-xl font-medium leading-5 bg-indigo-100 text-indigo-800"
-			>FrontEnd</span>
+			>
+				<button @click="filter('frontend')">FrontEnd</button>
+			</span>
 			<span
 				class="inline-flex mt-1 items-center px-8 py-3 rounded-full text-xl font-medium leading-5 bg-indigo-100 text-indigo-800"
-			>BackEnd</span>
+			>
+				<button @click="filter('backend')">BackEnd</button>
+			</span>
 			<span
 				class="inline-flex mt-1 items-center px-8 py-3 rounded-full text-xl font-medium leading-5 bg-indigo-100 text-indigo-800"
-			>Tools/Productivity</span>
+			>
+				<button @click="filter('tools_productivity')">Tools/Productivity</button>
+			</span>
+			<span
+				class="inline-flex mt-1 items-center px-8 py-3 rounded-full text-xl font-medium leading-5 bg-indigo-100 text-indigo-800"
+			>
+				<button @click="all">All</button>
+			</span>
 		</div>
 		<div class="mx-auto pb-6 max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 xl:mt-28">
 			<div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
 				<BlogCard
-					title="Improve your customer experience"
-					description="Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									Sint harum rerum voluptatem quo recusandae magni placeat
-									saepe molestiae, sed excepturi cumque corporis
-									perferendis hic."
-					:tags="['Case Study']"
-					image="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-				/>
-				<BlogCard
-					title="Boost your conversion rate"
-					description="Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Architecto accusantium praesentium eius, ut atque fuga
-										culpa, similique sequi cum eos quis dolorum."
-					:tags="['Blog']"
-					image="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-				/>
-				<BlogCard
-					title="How to use search engine optimization to drive sales"
-					description="Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Velit facilis asperiores porro quaerat doloribus,
-										eveniet dolore. Adipisci tempora aut inventore optio
-										animi., tempore temporibus quo laudantium."
-					:tags="['Video']"
+					v-for="(article, index) in articles"
+					:key="index"
+					:title="article.title"
+					:excerpt="article.excerpt"
+					:tags="article.tags"
 					image="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+					:date="article.date"
+					:time="article.time"
+					:slug="article.slug"
 				/>
 			</div>
 		</div>
@@ -63,7 +59,25 @@
 <script>
 import BlogCard from "~/components/Card/BlogCard";
 export default {
-	components: { BlogCard }
+	components: { BlogCard },
+	async asyncData({ $content, params, error }) {
+		try {
+			const articles = await $content(`articles`).fetch();
+			return { articles };
+		} catch (e) {
+			error({ statusCode: 404, message: "Post not found" });
+		}
+	},
+	methods: {
+		async filter(filter) {
+			this.articles = await this.$content("articles")
+				.where({ tags: `${filter}` })
+				.fetch();
+		},
+		async all() {
+			this.articles = await this.$content("articles").fetch();
+		}
+	}
 };
 </script>
 

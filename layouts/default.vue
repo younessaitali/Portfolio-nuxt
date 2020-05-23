@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="text-color-text bg-color-bg bg-transition flex flex-col justify-between"
+		class="text-color-text bg-color-bg bg-transition flex flex-col h-full justify-between"
 		:class="[darkMode?'dark':'light',{ solar: solarMode }]"
 	>
 		<Navbar
@@ -9,8 +9,8 @@
 			:isDark="darkMode"
 			:isSolar="solarMode"
 		/>
-		<nuxt />
-		<Footer />
+		<nuxt class="content" />
+		<Footer class="footer" />
 	</div>
 </template>
 

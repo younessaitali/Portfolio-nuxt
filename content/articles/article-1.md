@@ -1,7 +1,7 @@
 ---
 title: test Article
-tags: veggies, cooking
-slug: article
+slug: article-1
+tags: frontend
 date: Mar 16, 2020
 time: 6 min read
 excerpt: News, Tips and Trick about Development, Productivity.

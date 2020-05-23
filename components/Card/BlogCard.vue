@@ -7,22 +7,24 @@
 			<div class="flex-1">
 				<div class="flex">
 					<p
-						v-for="(tag, index) in tags"
+						v-for="(tag, index) in tagsToArray"
 						:key="index"
 						class="text-sm ml-2 leading-5 font-medium text-indigo-600"
 					>
 						<a href="#" class="hover:underline">{{tag}}</a>
 					</p>
 				</div>
-				<a href="#" class="block">
-					<h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">{{title}}</h3>
-					<p class="mt-3 text-base leading-6 text-gray-500">{{description}}</p>
-				</a>
+				<nuxt-link :to="`/blog/post/${slug}`">
+					<a href="#" class="block">
+						<h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">{{title}}</h3>
+						<p class="mt-3 text-base leading-6 text-gray-500">{{excerpt}}</p>
+					</a>
+				</nuxt-link>
 			</div>
 			<div class="mt-2 flex text-sm leading-5 text-gray-900">
-				<time datetime="2020-03-16">Mar 16, 2020</time>
+				<time datetime="2020-03-16">{{date}}</time>
 				<span class="mx-1">&middot;</span>
-				<span>6 min read</span>
+				<span>{{time}}</span>
 			</div>
 		</div>
 	</div>
@@ -36,17 +38,34 @@ export default {
 			type: String,
 			required: true
 		},
+		slug: {
+			type: String,
+			required: true
+		},
 		image: {
 			type: String,
 			required: true
 		},
-		description: {
+		excerpt: {
+			type: String,
+			required: true
+		},
+		date: {
+			type: String,
+			required: true
+		},
+		time: {
 			type: String,
 			required: true
 		},
 		tags: {
-			type: Array,
+			type: String,
 			required: true
+		}
+	},
+	computed: {
+		tagsToArray() {
+			return this.tags.split(", ");
 		}
 	}
 };

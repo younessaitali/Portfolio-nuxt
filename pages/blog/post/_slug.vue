@@ -40,13 +40,28 @@ export default {
 			slug: this.$route.params.slug
 		};
 	},
-	async asyncData({ $content, params }) {
+	async asyncData({ $content, params, error }) {
+		const slug = params.slug;
 		try {
-			let article = await $content(`articles/${params.slug}`).fetch();
-		} catch (error) {
-			let article = null;
+			const article = await $content(`articles/${slug}`).fetch();
+			return { article };
+		} catch (e) {
+			error({ statusCode: 404, message: "Post not found" });
 		}
-		return { article };
+	},
+
+	head() {
+		return {
+			// title: this.article.title,
+			meta: [
+				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
+				{
+					hid: "description",
+					name: "description",
+					content: "My custom description"
+				}
+			]
+		};
 	}
 };
 </script>

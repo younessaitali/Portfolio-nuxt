@@ -68,3 +68,22 @@
 .bg-transition {
   transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
+
+html,
+body {
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+}
+#__nuxt {
+  height: 100%;
+}
+
+#__layout {
+  height: 100%;
+}
