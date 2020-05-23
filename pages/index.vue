@@ -4,7 +4,7 @@
 		<main>
 			<AboutSection />
 			<ProjectSection />
-			<BlogSection />
+			<BlogSection :articles="articles" />
 		</main>
 	</div>
 </template>
@@ -20,6 +20,16 @@ export default {
 		AboutSection,
 		ProjectSection,
 		BlogSection
+	},
+	async asyncData({ $content, params, error }) {
+		try {
+			const articles = await $content(`articles`)
+				.limit(3)
+				.fetch();
+			return { articles };
+		} catch (e) {
+			error({ statusCode: 404, message: "Post not found" });
+		}
 	}
 };
 </script>

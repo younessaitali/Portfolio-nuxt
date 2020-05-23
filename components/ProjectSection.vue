@@ -1,6 +1,6 @@
 <template>
 	<section id="project">
-		<div class="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-24 lg:px-8">
+		<div class="relative bg-color-bg pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-24 lg:px-8">
 			<div class="relative max-w-screen-xl mx-auto">
 				<div class="text-center">
 					<h2
