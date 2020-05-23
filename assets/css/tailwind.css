@@ -9,8 +9,6 @@
 @import "tailwindcss/components";
 /* purgecss end ignore */
 @import "tailwindcss/utilities";
-/* purgecss end ignore */
-@import "./prism.css";
 
 /* Themes */
 

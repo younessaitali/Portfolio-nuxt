@@ -1,18 +1,18 @@
 ---
-title: Home
+title: test Article
+tags: veggies, cooking
+date: 2019-09-22
+excerpt: News, Tips and Trick about Development, Productivity.
+hero: carrots.jpg
 ---
 
-# Lorem ipsum
 
-## dolor—sit—amet
+## Lorem ipsum
 
-### consectetur &amp; adipisicing
+It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to Google!](http://google.com)
 
-#### elit
 
-##### elit
-
-```python{1,3-5}[server.py]
+```js
 const http = require("http");
 const bodyParser = require("body-parser");
 
@@ -24,3 +24,5 @@ http
   })
   .listen(3000);
 ```
+
+

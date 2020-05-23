@@ -44,6 +44,14 @@ export default {
     "@nuxt/content"
   ],
 
+  content: {
+    markdown: {
+      prism: {
+        theme: "~/assets/css/prism-material-oceanic.css"
+      }
+    }
+  },
+
   /*
    ** Build configuration
    */
