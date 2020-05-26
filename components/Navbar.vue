@@ -26,9 +26,14 @@
 					</div>
 				</div>
 				<div class="hidden md:block">
-					<nuxt-link to="/#about">
+					<nuxt-link to="/">
 						<a
 							class="font-medium text-color-text hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+						>Home</a>
+					</nuxt-link>
+					<nuxt-link to="/#about">
+						<a
+							class="ml-10 font-medium text-color-text hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
 						>About</a>
 					</nuxt-link>
 					<nuxt-link to="/#project">
@@ -106,9 +111,15 @@
 							</div>
 						</div>
 						<div class="px-2 pt-2 pb-3">
-							<nuxt-link to="/#about'">
+							<nuxt-link to="/'">
 								<a
 									class="block px-3 py-2 rounded-md text-base font-medium text-color-text hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
+								>Home</a>
+							</nuxt-link>
+							<nuxt-link to="/#about">
+								<a
+									href="#project"
+									class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-color-text hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
 								>About</a>
 							</nuxt-link>
 							<nuxt-link to="/#project">

@@ -15,10 +15,8 @@
 					</p>
 				</div>
 				<nuxt-link :to="`/blog/post/${slug}`">
-					<a href="#" class="block">
-						<h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">{{title}}</h3>
-						<p class="mt-3 text-base leading-6 text-gray-500">{{excerpt}}</p>
-					</a>
+					<h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">{{title}}</h3>
+					<p class="mt-3 text-base leading-6 text-gray-500">{{excerpt}}</p>
 				</nuxt-link>
 			</div>
 			<div class="mt-2 flex text-sm leading-5 text-gray-900">

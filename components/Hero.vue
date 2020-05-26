@@ -1,5 +1,5 @@
 <template>
-	<div class="pt-6 pb-12 sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32">
+	<div class="bg-color-bg pt-6 pb-12 sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32">
 		<div class="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 xl:mt-28">
 			<div class="text-center">
 				<h2
