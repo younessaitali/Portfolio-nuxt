@@ -11,7 +11,7 @@
 @import "tailwindcss/utilities";
 
 /* Themes */
-
+/* purgecss start ignore */
 :root {
   /* --bgbg: linear-gradient(to bottom, transparent, rgba(236, 198, 48, 0.1)); */
   --gray0: #f5f5f5;
@@ -95,3 +95,4 @@ body {
 #__layout {
   height: 100%;
 }
+/* purgecss end ignore */

@@ -4,9 +4,9 @@
 			<nav class="relative flex items-center justify-between sm:h-10 md:justify-center">
 				<div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
 					<div class="flex items-center justify-between w-full md:w-auto">
-						<a href="#">
+						<span href="#">
 							<img class="h-8 w-auto sm:h-10" src="/img/logos/workflow-mark-on-white.svg" alt />
-						</a>
+						</span>
 						<div class="-mr-2 flex items-center md:hidden">
 							<button
 								@click="open = true"
@@ -27,26 +27,26 @@
 				</div>
 				<div class="hidden md:block">
 					<nuxt-link to="/">
-						<a
+						<span
 							class="font-medium text-color-text hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-						>Home</a>
+						>Home</span>
 					</nuxt-link>
 					<nuxt-link to="/#about">
-						<a
+						<span
 							class="ml-10 font-medium text-color-text hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-						>About</a>
+						>About</span>
 					</nuxt-link>
 					<nuxt-link to="/#project">
-						<a
+						<span
 							class="ml-10 font-medium text-color-text hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-						>Project</a>
+						>Project</span>
 					</nuxt-link>
 					<nuxt-link to="/blog">
-						<a
+						<span
 							class="ml-10 font-medium text-color-text hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-						>Blog</a>
+						>Blog</span>
 					</nuxt-link>
-					<a
+					<span
 						@click="darkModeHandler"
 						href="#"
 						class="ml-10 font-medium text-color-text focus:outline-none transition duration-150 ease-in-out"
@@ -59,8 +59,8 @@
 								d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z"
 							/>
 						</svg>
-					</a>
-					<a
+					</span>
+					<span
 						@click="solarModeHandler"
 						href="#"
 						class="ml-10 font-medium text-color-text hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
@@ -73,7 +73,7 @@
 							/>
 						</svg>
 						<span class="ml-1">{{isSolar?"solarize":"normalize"}}</span>
-					</a>
+					</span>
 				</div>
 			</nav>
 		</div>
@@ -112,28 +112,28 @@
 						</div>
 						<div class="px-2 pt-2 pb-3">
 							<nuxt-link to="/'">
-								<a
+								<span
 									class="block px-3 py-2 rounded-md text-base font-medium text-color-text hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-								>Home</a>
+								>Home</span>
 							</nuxt-link>
 							<nuxt-link to="/#about">
-								<a
+								<span
 									href="#project"
 									class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-color-text hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-								>About</a>
+								>About</span>
 							</nuxt-link>
 							<nuxt-link to="/#project">
-								<a
+								<span
 									href="#project"
 									class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-color-text hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-								>Project</a>
+								>Project</span>
 							</nuxt-link>
 							<nuxt-link to="/blog">
-								<a
+								<span
 									class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-color-text hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-								>Blog</a>
+								>Blog</span>
 							</nuxt-link>
-							<a
+							<span
 								@click="darkModeHandler"
 								class="ml-1 mt-4 flex font-medium text-color-text transition duration-150 ease-in-out"
 							>
@@ -145,8 +145,8 @@
 										d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z"
 									/>
 								</svg>
-							</a>
-							<a
+							</span>
+							<span
 								@click="solarModeHandler"
 								class="ml-1 mt-4 flex font-medium text-color-text hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
 							>
@@ -158,7 +158,7 @@
 									/>
 								</svg>
 								<span class="ml-1">{{isSolar?"solarize":"normalize"}}</span>
-							</a>
+							</span>
 						</div>
 					</div>
 				</div>
