@@ -12,7 +12,7 @@
 		</div>
 		<div class="flex-1 bg-white p-6 flex flex-col justify-between">
 			<div class="flex-1">
-				<p class="text-sm leading-5 font-medium text-gray-100">
+				<div class="text-sm leading-5 font-medium text-gray-100">
 					<a
 						v-for="(item, index) in tech"
 						:key="index"
@@ -24,7 +24,7 @@
 					<a href="#" class="block">
 						<p class="mt-3 text-base leading-6 text-gray-500">{{description}}</p>
 					</a>
-				</p>
+				</div>
 			</div>
 			<div class="mt-6 flex items-center justify-center">
 				<span class="inline-flex mx-2 rounded-md shadow-sm">
