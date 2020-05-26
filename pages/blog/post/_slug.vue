@@ -1,5 +1,5 @@
 <template>
-	<div class="pt-2 pb-12 sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32">
+	<div class="pt-2 pb-12 bg-color-bg sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32">
 		<div class="mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 xl:mt-28">
 			<div class="text-center">
 				<h2
@@ -27,9 +27,9 @@
 				class="inline-flex mt-1 items-center px-8 py-3 rounded-full text-xl font-medium leading-5 bg-indigo-100 text-indigo-800"
 			>FrontEnd</span>
 		</div>
-		<div class="mx-auto pb-6 max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 xl:mt-28">
+		<article class="mx-auto pb-6 max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 xl:mt-28">
 			<nuxt-content :document="article" />
-		</div>
+		</article>
 	</div>
 </template>
 

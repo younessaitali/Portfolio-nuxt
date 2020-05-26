@@ -1,6 +1,6 @@
 <template>
-	<section>
-		<div class="relative bg-nav pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+	<section class="bg-color-bg_footer section-clip-Path-top">
+		<div class="bg-nav relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
 			<div class="absolute inset-0">
 				<div class="bg-white h-1/3 sm:h-2/3"></div>
 			</div>
@@ -9,7 +9,7 @@
 					<h2
 						class="text-3xl leading-9 tracking-tight font-extrabold text-color-text sm:text-4xl sm:leading-10"
 					>From the blog</h2>
-					<p class="mt-3 max-w-2xl mx-auto text-xl leading-7 text-gray-500 sm:mt-4">
+					<p class="mt-3 max-w-2xl mx-auto text-xl leading-7 text-color-secondary-text sm:mt-4">
 						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa
 						libero labore natus atque, ducimus sed.
 					</p>

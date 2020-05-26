@@ -13,22 +13,24 @@
 /* Themes */
 
 :root {
-  --gray0: #f8f8f8;
-  --gray1: #dbe1e8;
-  --gray2: #b2becd;
-  --gray3: rgba(160, 174, 192, 0.7);
-  --gray4: #454e56;
-  --gray5: #2a2e35;
-  --gray6: #12181b;
-  --blue: #0084a5;
+  /* --bgbg: linear-gradient(to bottom, transparent, rgba(236, 198, 48, 0.1)); */
+  --gray0: #f5f5f5;
+  --gray1: #d8d7d7;
+  --gray2: #ffffff;
+  --gray3: #1f2429;
+  --gray4: #e3e6e9;
+  --gray5: #242a30;
+  --gray6: #13181e;
+  --blue: #0f4c75;
   --purple: #a82dd1;
   --yellow: #fff565;
 }
 
 .light {
   --bg: var(--gray0);
-  --bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));
-  --bg-footer: var(--gray1);
+  /* --bg-nav: var(--gray2); */
+  --bg-nav: linear-gradient(to right, var(--gray1), var(--gray2));
+  --bg-footer: var(--gray4);
   --text: var(--gray6);
   --secondary-text: var(--gray3);
   --border-color: var(--blue);
@@ -38,20 +40,20 @@
 .dark {
   --bg: var(--gray5);
   --bg-nav: linear-gradient(to right, var(--gray5), var(--gray6));
-  --bg-footer: var(--gray4);
-  --text: var(--gray0);
+  --bg-footer: var(--gray3);
+  --text: var(--gray1);
   --secondary-text: var(--gray3);
   --border-color: var(--purple);
   --bg-solar: var(--blue);
 }
 
 .solar {
-  --gray0: #fbffd4;
-  --gray1: #f7f8d0;
-  --gray2: #b6f880;
-  --gray3: #5ec72d;
-  --gray4: #3ea565;
-  --gray5: #005368;
+  --gray0: #fdf6e3;
+  --gray1: #eee8d5;
+  --gray2: #f1e3b4;
+  --gray3: #07404e;
+  --gray4: #f3ead1;
+  --gray5: #073642;
   --gray6: #003d4c;
   /* --bg: var(--gray5);
 	--bg-nav: linear-gradient(to right, var(--gray5), var(--gray6));
@@ -67,6 +69,12 @@
 
 .bg-transition {
   transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+}
+.section-clip-Path {
+  clip-path: polygon(0% 5%, 100% 0%, 100% 95%, 0% 100%);
+}
+.section-clip-Path-top {
+  clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 html,
