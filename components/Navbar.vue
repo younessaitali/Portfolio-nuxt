@@ -4,9 +4,6 @@
 			<nav class="relative flex items-center justify-between sm:h-10 md:justify-center">
 				<div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
 					<div class="flex items-center justify-between w-full md:w-auto">
-						<span href="#">
-							<img class="h-8 w-auto sm:h-10" src="/img/logos/workflow-mark-on-white.svg" alt />
-						</span>
 						<div class="-mr-2 flex items-center md:hidden">
 							<button
 								@click="open = true"
@@ -46,7 +43,7 @@
 							class="ml-10 font-medium text-color-text hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
 						>Blog</span>
 					</nuxt-link>
-					<span
+					<a
 						@click="darkModeHandler"
 						href="#"
 						class="ml-10 font-medium text-color-text focus:outline-none transition duration-150 ease-in-out"
@@ -59,8 +56,8 @@
 								d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z"
 							/>
 						</svg>
-					</span>
-					<span
+					</a>
+					<a
 						@click="solarModeHandler"
 						href="#"
 						class="ml-10 font-medium text-color-text hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
@@ -73,7 +70,7 @@
 							/>
 						</svg>
 						<span class="ml-1">{{isSolar?"solarize":"normalize"}}</span>
-					</span>
+					</a>
 				</div>
 			</nav>
 		</div>
@@ -90,9 +87,6 @@
 				<div class="rounded-lg shadow-md transition transform origin-top-right" v-show="open">
 					<div class="rounded-lg bg-color-bg shadow-xs overflow-hidden">
 						<div class="px-5 pt-4 flex items-center justify-between">
-							<div>
-								<img class="h-8 w-auto" src="/img/logos/workflow-mark-on-white.svg" alt />
-							</div>
 							<div class="-mr-2">
 								<button
 									@click="open = false"
@@ -133,7 +127,7 @@
 									class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-color-text hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
 								>Blog</span>
 							</nuxt-link>
-							<span
+							<a
 								@click="darkModeHandler"
 								class="ml-1 mt-4 flex font-medium text-color-text transition duration-150 ease-in-out"
 							>
@@ -145,8 +139,8 @@
 										d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z"
 									/>
 								</svg>
-							</span>
-							<span
+							</a>
+							<a
 								@click="solarModeHandler"
 								class="ml-1 mt-4 flex font-medium text-color-text hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
 							>
@@ -158,7 +152,7 @@
 									/>
 								</svg>
 								<span class="ml-1">{{isSolar?"solarize":"normalize"}}</span>
-							</span>
+							</a>
 						</div>
 					</div>
 				</div>

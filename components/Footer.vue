@@ -3,19 +3,30 @@
 		<div class="bg-color-bg_footer">
 			<div class="max-w-screen-xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
 				<nav class="-mx-5 -my-2 flex flex-wrap justify-center">
-					<div class="px-5 py-2">
-						<a href="#" class="text-base leading-6 secondary_text hover:text-gray-900">About</a>
-					</div>
-					<div class="px-5 py-2">
-						<a href="#" class="text-base leading-6 secondary_text hover:text-gray-900">Blog</a>
-					</div>
+					<nuxt-link to="/#about">
+						<div class="px-5 py-2">
+							<span class="text-base leading-6 secondary_text hover:text-gray-900">About</span>
+						</div>
+					</nuxt-link>
+
+					<nuxt-link to="/blog">
+						<div class="px-5 py-2">
+							<span class="text-base leading-6 secondary_text hover:text-gray-900">Blog</span>
+						</div>
+					</nuxt-link>
 
 					<div class="px-5 py-2">
-						<a href="#" class="text-base leading-6 secondary_text hover:text-gray-900">Contact</a>
+						<a
+							target="_blank"
+							href="mailto:younes.aitali95@gmail.com"
+							class="text-base leading-6 secondary_text hover:text-gray-900"
+						>Contact</a>
 					</div>
-					<div class="px-5 py-2">
-						<a href="#" class="text-base leading-6 secondary_text hover:text-gray-900">Project</a>
-					</div>
+					<nuxt-link to="/#project">
+						<div class="px-5 py-2">
+							<span class="text-base leading-6 secondary_text hover:text-gray-900">Project</span>
+						</div>
+					</nuxt-link>
 				</nav>
 				<div class="mt-8 flex justify-center">
 					<a href="https://www.facebook.com/aitali.youness" class="secondary_text hover:text-gray-500">
