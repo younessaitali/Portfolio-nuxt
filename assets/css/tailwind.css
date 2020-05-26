@@ -17,7 +17,7 @@
   --gray0: #f5f5f5;
   --gray1: #d8d7d7;
   --gray2: #ffffff;
-  --gray3: rgb(13, 22, 27);
+  --gray3: #1f2429;
   --gray4: #e3e6e9;
   --gray5: #242a30;
   --gray6: #13181e;
@@ -52,7 +52,7 @@
   --gray1: #eee8d5;
   --gray2: #f1e3b4;
   --gray3: #07404e;
-  --gray4: #f0e6c8;
+  --gray4: #f3ead1;
   --gray5: #073642;
   --gray6: #003d4c;
   /* --bg: var(--gray5);
@@ -69,6 +69,12 @@
 
 .bg-transition {
   transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+}
+.section-clip-Path {
+  clip-path: polygon(0% 5%, 100% 0%, 100% 95%, 0% 100%);
+}
+.section-clip-Path-top {
+  clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 html,

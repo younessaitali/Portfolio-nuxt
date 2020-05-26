@@ -1,6 +1,6 @@
 <template>
-	<section id="about" class="bg-nav">
-		<div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+	<section id="about" class="bg-nav section-clip-Path">
+		<div class="max-w-screen-xl mx-auto py-20 px-4 sm:px-6 lg:py-18 lg:px-8">
 			<div class="text-center">
 				<h1
 					class="text-3xl leading-9 tracking-tight font-extrabold text-color-text sm:text-4xl sm:leading-10"
