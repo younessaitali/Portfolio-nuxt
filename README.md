@@ -1,6 +1,6 @@
-# portfolio1.0
+# portfolio
 
-> My superior Nuxt.js project
+> My personal Portfolio/Blog. 
 
 ## Build Setup
 
